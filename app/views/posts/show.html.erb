@@ -1,0 +1,69 @@
+<%= render 'shared/header' %>
+
+<div class="post-detail">
+
+  <h2>投稿の詳細</h2>
+  <%= image_tag @post.image, class:"detail-image" %>
+  <% if user_signed_in? %>
+
+    <% if current_user.id == @post.user.id %>
+      <div class="edit-destroy-btn">
+        <%= link_to "商品の編集", edit_post_path(@post.id), method: :get, class: "item-edit" %>
+        <p class="or-text">or</p>
+        <%= link_to "削除", post_path(@post.id), method: :delete, class:"item-destroy" %>
+      </div>
+
+    <% else %>
+
+      <% if current_user.already_liked?(@post) %>
+        <%= button_to 'いいねを取り消す', post_like_path(@post.id), method: :delete %>
+      <% else %>
+        <%= button_to  post_likes_path(@post.id), method: :post, class: "like" do %>
+          <div class="like-btn">
+            <%= image_tag("like-ikon.png", class:"like-ikon") %>
+            <span class="like-letter">いいね！</span>
+          </div>
+        <% end %>
+      <% end %>
+      
+    <% end %>
+
+  <% end %>
+
+  <div class="posts-detail-container">
+   <table class="container-table">
+    <tbody>
+      <tr>
+        <th class="table-head">タイトル</th>
+        <td class="table-body"><%= @post.title %></td>
+      </tr>
+      <tr>
+        <th class="table-head">著者</th>
+        <td class="table-body"><%= @post.writer %></td>
+      </tr>
+      <tr>
+        <th class="table-head">ジャンル</th>
+        <td class="table-body"><%= @post.genre.name %></td>
+      </tr>
+      <tr>
+        <th class="table-head">難易度</th>
+        <td class="table-body"><%= @post.degree_of_difficult.name %></td>
+      </tr>
+      <tr>
+        <th class="table-head">こんな人におすすめ</th>
+        <td class="table-body"><%= @post.to_whom %></td>
+      </tr>
+      <tr>
+        <th class="table-head">概要</th>
+        <td class="table-body"><%= @post.overview %></td>
+      </tr>
+      <tr>
+        <th class="table-head">投稿者</th>
+        <td class="table-body"><%= @post.user.nickname %></td>
+      </tr>
+    </tbody>   
+   </table>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>

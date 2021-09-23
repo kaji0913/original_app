@@ -1,0 +1,198 @@
+/* リセットCSS */
+body {
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+
+/* h2デザイン */
+
+h2 {
+  position: relative;
+  padding: 0.25em 1em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  text-align: center;
+}
+h2:before, h2:after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: black;
+}
+h2:before {
+  left: 7px;
+}
+h2:after {
+  right: 7px;
+}
+
+/* headerの実装 */
+
+header{
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+}
+
+.heading{
+  margin-left: 20px;
+  width: 40%;
+}
+
+.nav-bar{
+  width: 60%;
+}
+
+.nav-lists{
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  font-size: 0.1rem;
+}
+.nav-lists-content{
+  border-right: solid black 1px;
+  list-style: none;
+  height: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+}
+
+.nav-lists-content:hover{
+  background-color: gainsboro;
+}
+
+.user-nickname{
+  list-style: none;
+  padding: 15px 20px ;
+  font-size: 0.1rem;
+  text-decoration: underline;
+}
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+
+/* bodyの実装 */
+
+.contents{
+  text-align: center;
+}
+.first-view{
+  height: 40vh;
+}
+.top-image{
+  height: 100%;
+  width: 100%;
+}
+.upper-contents{
+  background-color: #FFFFFF;
+  margin: 0 200px;
+  padding-top: 30px;
+}
+
+.books{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+
+.books-contents{
+  height: 350px;
+  width: 270px;
+  background-color: white;
+  border: solid 2px black;
+  margin: 30px;
+  padding: 10px;
+}
+
+.book-image{
+  width: 70%;
+  height: 67%;
+}
+
+.good{
+ margin-top: -40px;
+}
+
+.rank{
+  font-size: 20px;
+  margin-bottom: -30px;
+}
+
+
+
+.bottom-contents{
+  margin: 0 200px;
+}
+
+/* footerの実装 */
+footer{
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+@media(max-width: 1080px){
+  .upper-contents{
+    margin: 0 100px;
+  }
+}
+
+@media(max-width: 858px){
+  header{
+    height: 110px;
+    flex-flow:column;
+  }
+  .heading{
+    width: 100%;
+  }
+  .nav-bar{
+    width: 100%;
+  }
+  .nav-lists{
+    justify-content: flex-end;
+    text-align: center;
+  }
+  .nav-lists-content{
+    width: 100%;
+  }
+  .first-view{
+    height: 30vh;
+  }
+
+}
+
+@media(max-width: 550px){
+  header{
+    height: 120px;
+  }
+  .first-view{
+    height: 20vh;
+  }
+  .nav-lists{
+    justify-content: center;
+  }
+  .nav-lists-content{
+    padding: 15px 15px;
+  }
+  .upper-contents, .bottom-contents{
+    margin: 0 30px ;
+  }
+}

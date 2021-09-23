@@ -1,0 +1,81 @@
+
+/* bodyの実装 */
+
+.contents{
+  text-align: center;
+}
+.first-view{
+  height: 40vh;
+}
+.top-image{
+  height: 100%;
+  width: 100%;
+}
+
+.upper-contents{
+  background-color: #FFFFFF;
+  margin: 0 200px;
+  padding-top: 30px;
+}
+
+.ex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  margin-top: 20px;
+}
+
+.detail{
+  width: 50%;
+  text-align: start;
+  margin: 0 10px;
+}
+
+.detail>h3{
+  font-size: 25px;
+}
+
+.photo{
+  width: 50%;
+  margin: 0 10px;
+  height: 300px;
+}
+
+/* footerの実装 */
+footer{
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+@media(max-width: 858px){
+  .ex{
+    display: unset;
+  }
+  .detail{
+    width: 100%;
+    margin: 20px 0;
+  }
+  .photo{
+    display: none;
+  }
+
+}
+
+@media(max-width: 550px){
+  header{
+    height: 120px;
+  }
+  .first-view{
+    height: 20vh;
+  }
+  .nav-lists{
+    justify-content: center;
+  }
+  .nav-lists-content{
+    padding: 15px 15px;
+  }
+  .upper-contents, .bottom-contents{
+    margin: 0 30px ;
+  }
+}

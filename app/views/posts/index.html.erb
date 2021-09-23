@@ -1,0 +1,53 @@
+<%= render "shared/header" %>
+
+<div class="contents">
+  <div class="first-view">
+    <%= image_tag("22081184_l.jpg", class:"top-image") %>
+  </div>
+  <div class="upper-contents">
+    <h2>最新の投稿</h2>
+    <ul class="books">
+      <% @posts.each do |post| %>
+       <div class="books-container">
+        <li class="books-contents">
+          <%= link_to post_path(post.id), method: :get do %>
+            <%= image_tag post.image, class:"book-image" %>
+            <p class="book-title"><%= post.title %></p>
+            <p class="book-writer"><%= post.writer %></p>
+            <p class="book-genre"><%= post.genre.name %></p>
+          <% end %>
+        </li>
+        <p class="good">いいね！(<%= post.liked_users.count %>)</p>
+       </div>
+      <% end %>          
+    </ul>
+  </div>
+  <div class="bottom-contents">
+    <h2>人気ランキング</h2>
+    <ul class="books">
+      <% @all_ranks.each.with_index(1) do |post, i| %>
+          <div class="books-container">
+          <P class="rank">第<%= i %>位</P>
+            <li class="books-contents">
+              <%= link_to post_path(post.id), method: :get do %>
+                <%= image_tag post.image, class:"book-image" %>
+                <p class="book-title"><%= post.title %></p>
+                <p class="book-writer"><%= post.writer %></p>
+                <p class="book-genre"><%= post.genre.name %></p>
+              <% end %>
+            </li>
+          <p class="good">いいね！(<%= post.liked_users.count %>)</p>
+          </div>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<% if user_signed_in? %>
+  <%= link_to(new_post_path, class: 'purchase-btn') do %>
+    <span class='purchase-btn-text'>投稿する</span>
+    <%= image_tag 'book-sample.jpeg', size: '185x50', class: "purchase-btn-icon" %>
+  <% end %>
+<% end %>
+
+<%= render "shared/footer" %>

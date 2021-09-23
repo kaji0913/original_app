@@ -1,0 +1,21 @@
+<%= render 'shared/header' %>
+<h2>検索画面</h2>
+<div class="contents">
+  <%= search_form_for @p, url: searches_search_path do |f| %>
+    <div class="search-contents">
+      <%= f.label :name_eq, 'ジャンル'%>
+      <br>
+      <%= f.collection_select :genre_id_eq, Genre.where.not(id: 1), :id, :name, include_blank: '指定なし' %>
+    </div>
+    <br>
+    <div class="search-contents">
+    <%= f.label :name_eq, '難易度', class:"degree-search" %>
+    <br>
+    <%= f.collection_select :degree_of_difficult_id_eq, DegreeOfDifficult.where.not(id: 1), :id, :name, include_blank: '指定なし' %>
+    <br>
+    </div>
+    <%= f.submit '検索',  class:"search-btn" %>
+  <% end %>
+
+</div>
+<%= render 'shared/footer' %>

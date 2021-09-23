@@ -1,0 +1,63 @@
+<%= render 'shared/header'%>
+<div class="post-form">
+  <h2 class="post-form-title">編集内容を入力</h2>
+  <%= form_with(model: @post, local: true) do |f| %>
+
+  <%#= render 'shared/error_messages', model: f.object %>
+  <div class="new-post">
+    <div class="book-sample">
+    画像を選択
+      <span class="indispensalble">*</span>
+    </div>
+    <div class="click-upload">
+    <p>
+      クリックしてファイルをアップロード
+    </P>
+    <%= f.file_field :image %>
+    </div>
+
+    <div class="book-title">
+    タイトル
+      <span class="indispensalble">*</span>
+    </div>
+    <%= f.text_field :title, placeholder:"本のタイトル", class:"book-title-text" %>
+
+    <div class="book-writer">
+    著者
+      <span class="indispensalble">*</span>
+    </div>
+    <%= f.text_field :wrier, placeholder:"著者", class:"book-writer-text" %>
+
+    <div class="book-genre">
+    ジャンル
+    <span class="indispensalble">*</span>
+    </div>
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box"}) %>
+
+    <div class="book-difficulty">
+    本の難易度
+    <span class="indispensalble">*</span>
+    </div>
+    <%= f.collection_select(:degree_of_difficult_id, DegreeOfDifficult.all, :id, :name, {}, {class:"select-box"}) %>
+
+    <div class="to-whom">
+    こんな人にオススメ
+      <span class="indispensalble">*</span>
+    </div>
+    <%= f.text_area :to_whom, placeholder:"例：営業のスキルに磨きをかけたい方、営業をはじめて学ぶ方（100字まで）", maxlength:"100", class:"upper-post-text" %>
+
+    <div class="overview">
+    本の概要
+      <span class="indispensable">*</span>
+    </div>
+    <%= f.text_area :overview, placeholder:"本の概要を入力（1000文字まで)", maxlength:"1000", class:"rower-post-text" %>
+
+    <div class="submit_btn">
+    <%= f.submit "編集する" %>
+    </div>
+
+    <% end %>
+
+    </div>
+</div>
+<%=render 'shared/footer' %>

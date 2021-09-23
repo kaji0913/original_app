@@ -1,0 +1,30 @@
+<%= render 'shared/header' %>
+
+<div class="contents">
+  
+  <h2>検索結果 (ジャンル : <%= render 'shared/genre', genre: @genre %> / 難易度 : <%= render 'shared/degree', degree: @degree %>)</h2>  
+  <% if @results.length !=0 %>
+    <ul class="books">
+      <% @results.each do |result| %>
+        <div class="books-container">
+          <li class="books-contents">
+            <%= link_to post_path(result.id), method: :get do %>
+              <%= image_tag result.image, class:"book-image" %>
+              <p class="book-title"><%= result.title %></p>
+              <p class="book-writer"><%= result.writer %></p>
+              <p class="book-genre"><%= result.genre.name %></p>
+            <% end %>
+          </li>
+          <p class="good">いいね！(<%= result.liked_users.count %>)</p>
+        </div>
+      <% end %>
+    </ul>
+  <% else %>
+    <p class="no-result">該当する商品はありません</p>
+  <% end %>
+  <br>
+  <%= link_to 'トップページへ戻る', root_path, class:"result-top" %>
+  
+</div>
+
+<%= render 'shared/footer' %>

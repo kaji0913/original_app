@@ -1,0 +1,43 @@
+    <header>
+      <div class="heading">
+        <%= link_to root_path do %>
+          <h1 class="title">BOOK REVIEW SITE</h1>
+        <% end %>
+      </div>
+      <div class="nav-bar">
+        <ul class="nav-lists">
+
+          <%= link_to root_path do %>
+            <li class="nav-lists-content">トップ</li>
+          <% end %>
+
+          <%= link_to about_posts_path do %>
+            <li class="nav-lists-content">このサイトについて</li>
+          <% end %>
+          
+          <%= link_to searches_path do%>
+            <li class="nav-lists-content">検索</li>
+          <% end %>
+
+          <% if user_signed_in? %>
+
+            <%= link_to destroy_user_session_path, method: :delete do %>
+            <li class="nav-lists-content">ログアウト</li>
+            <% end %>
+            <li class="user-nickname"><%= current_user.nickname %>さん</li>
+
+          <% else %>
+
+            <%= link_to new_user_registration_path do %>
+            <li class="nav-lists-content">新規登録</li>
+            <% end %>
+
+            <%= link_to new_user_session_path do %>
+            <li class="nav-lists-content">ログイン</li>
+            <% end %>
+
+          <% end %>
+
+        </ul>
+      </div>
+    </header>

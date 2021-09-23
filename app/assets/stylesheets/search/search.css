@@ -1,0 +1,19 @@
+.search-contents{
+  margin-top: 10px;
+}
+
+.search-btn{
+  margin: 20px 0px;
+}
+
+.no-result{
+  margin: 20px 0;
+}
+
+.result-top{
+  border: 1px solid black;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: whitesmoke;
+}

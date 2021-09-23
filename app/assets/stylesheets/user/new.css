@@ -1,0 +1,13 @@
+.form-group{
+  margin: 20px;
+}
+
+.string-field{
+  width: 200px;
+  height: 20px;
+}
+
+.text-field{
+  height: 200px;
+  width: 1000px;
+}
