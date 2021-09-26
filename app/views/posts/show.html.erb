@@ -8,7 +8,7 @@
 
     <% if current_user.id == @post.user.id %>
       <div class="edit-destroy-btn">
-        <%= link_to "商品の編集", edit_post_path(@post.id), method: :get, class: "item-edit" %>
+        <%= link_to "投稿の編集", edit_post_path(@post.id), method: :get, class: "item-edit" %>
         <p class="or-text">or</p>
         <%= link_to "削除", post_path(@post.id), method: :delete, class:"item-destroy" %>
       </div>
