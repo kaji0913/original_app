@@ -33,8 +33,46 @@ http://54.95.24.223:3000/
 - ランキング表示
 
 # 実装した機能についての画像やGIFおよびその説明
+
+## サインイン
+[![Image from Gyazo](https://i.gyazo.com/31d8722c0fcae88aa00ff5f11f327838.gif)](https://gyazo.com/31d8722c0fcae88aa00ff5f11f327838)
+
+## ログイン
+[![Image from Gyazo](https://i.gyazo.com/374162dcea26ec05bf07baa782800e2d.gif)](https://gyazo.com/374162dcea26ec05bf07baa782800e2d)
+
+## ログアウト
+[![Image from Gyazo](https://i.gyazo.com/22f53e3547e3ca105f26ea6533f4222b.gif)](https://gyazo.com/22f53e3547e3ca105f26ea6533f4222b)
+
 ## 投稿機能
+- ログイン中のユーザーのみ「投稿する」のボタンが表示される
 [![Image from Gyazo](https://i.gyazo.com/8e7dcbf2199edea602fc12260861a691.gif)](https://gyazo.com/8e7dcbf2199edea602fc12260861a691)
+
+## 投稿詳細
+- ユーザー＝投稿者の場合は編集ボタンと削除ボタンを表示
+- ユーザー≠投稿者の場合はいいねボタンを表示
+[![Image from Gyazo](https://i.gyazo.com/14d900df7fb66efabee73157fdcca030.gif)](https://gyazo.com/14d900df7fb66efabee73157fdcca030)
+
+## 投稿編集
+- ユーザー＝投稿者の場合のみ編集可能
+[![Image from Gyazo](https://i.gyazo.com/49bfc46895176673af72a16a7481a361.gif)](https://gyazo.com/49bfc46895176673af72a16a7481a361)
+
+## 投稿削除
+- ユーザー＝投稿者の場合のみ削除可能
+[![Image from Gyazo](https://i.gyazo.com/4fc9d1d47cdb4c954edbe19c372d6742.gif)](https://gyazo.com/4fc9d1d47cdb4c954edbe19c372d6742)
+
+## いいね機能
+- ユーザー≠投稿者の場合のみいいね可能
+[![Image from Gyazo](https://i.gyazo.com/435ed5f6325cbb13b83bab7d1bd322cb.gif)](https://gyazo.com/435ed5f6325cbb13b83bab7d1bd322cb)
+
+## いいね取り消し
+[![Image from Gyazo](https://i.gyazo.com/d05201d8365790e03b418dda8376ded3.gif)](https://gyazo.com/d05201d8365790e03b418dda8376ded3)
+
+## ランキング表示機能
+- いいねの数に応じて上位４つの記事をランキング表示
+[![Image from Gyazo](https://i.gyazo.com/7254bb1d53afd5cdd10ab2ab8cfac5e9.gif)](https://gyazo.com/7254bb1d53afd5cdd10ab2ab8cfac5e9)
+
+
+
 # データベース設計
 
 # ローカルでの動作方法
