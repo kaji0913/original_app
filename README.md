@@ -33,7 +33,8 @@ http://54.95.24.223:3000/
 - ランキング表示
 
 # 実装した機能についての画像やGIFおよびその説明
-
+## 投稿機能
+[![Image from Gyazo](https://i.gyazo.com/8e7dcbf2199edea602fc12260861a691.gif)](https://gyazo.com/8e7dcbf2199edea602fc12260861a691)
 # データベース設計
 
 # ローカルでの動作方法
