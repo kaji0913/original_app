@@ -8,7 +8,7 @@ BOOK REVIEW SITE
 
 
 # URL
-http://54.95.24.223:3000/  
+http://54.95.24.223 
 
 # テスト用アカウント
 - メールアドレス hoge@hoge
@@ -71,7 +71,15 @@ http://54.95.24.223:3000/
 - いいねの数に応じて上位４つの記事をランキング表示
 [![Image from Gyazo](https://i.gyazo.com/7254bb1d53afd5cdd10ab2ab8cfac5e9.gif)](https://gyazo.com/7254bb1d53afd5cdd10ab2ab8cfac5e9)
 
+## 検索機能
+[![Image from Gyazo](https://i.gyazo.com/e442d24e1bdfc2f4057949d5ac0ec1ac.gif)](https://gyazo.com/e442d24e1bdfc2f4057949d5ac0ec1ac)
 
+# 今後実装予定の機能
+- ユーザーのフォロー機能
+- 投稿者の詳細が見れる機能
+- フォローしたユーザーの記事のみが表示される機能
+- いいね！した記事のマイページでの閲覧
+- マイページ機能
 
 # データベース設計
 
